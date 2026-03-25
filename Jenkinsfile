@@ -6,11 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/madagonibharath/jenkins-java-lab.git'
-            }
-        }
 
         stage('Build') {
             steps {
@@ -23,5 +18,6 @@ pipeline {
                 sh 'java -jar target/hello-app-1.0.jar'
             }
         }
+
     }
 }
